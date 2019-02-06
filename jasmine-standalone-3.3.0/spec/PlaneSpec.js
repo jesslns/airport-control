@@ -18,3 +18,6 @@ describe('Plane',function(){
     expect(airport.clearForTakeOff).toHaveBeenCalled();
   });
 });
+
+// is weather spec does not need to change due delegation to weather object.
+// weather object was delegated from airport objecct

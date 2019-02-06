@@ -10,7 +10,7 @@ describe('Weather', function(){
     expect(weather.isStormy()).toBeTruthy();
   });
   it('generates non-stormy weather by chance', function(){
-    spyOn(Math,'random').and.returnValue(0); //in JS, the object 0 has an in
+    spyOn(Math,'random').and.returnValue(0); 
     expect(weather.isStormy()).toBeFalsy();
   });
 
