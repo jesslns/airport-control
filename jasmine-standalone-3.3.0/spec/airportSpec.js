@@ -6,7 +6,7 @@ describe('Airport', function(){
   beforeEach(function(){
     airport = new Airport();
     plane = jasmine.createSpy('plane',['land']);
-  });
+  }); // use createSpyObj for a mock with multiple spies
   it('has no planes by default', function(){
     expect(airport.planes()).toEqual([]);
   });
@@ -18,5 +18,9 @@ describe('Airport', function(){
     airport.clearForLanding(plane);
     airport.clearForTakeOff(plane);
     expect(airport.planes()).toEqual([]);
+  });
+
+  it('can check for weather conditions', function(){
+    expect(airport.isStormy()).toBeFalsy()
   });
 });
